@@ -3,7 +3,7 @@ module.exports = {
   description: "My personal page",
   head: [["link", { rel: "icon", href: `/logo.png` }]],
   base: "/",
-  dest: "./dist",
+  dest: "../docs",
 
   themeConfig: {
     search: false,
