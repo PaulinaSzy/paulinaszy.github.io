@@ -1,22 +1,13 @@
 module.exports = {
-  title: "Harry Potter",
-  description: "The description of the site.",
+  title: "Paulina Szymaszek",
+  description: "My personal page",
   head: [["link", { rel: "icon", href: `/logo.png` }]],
   base: "/",
   dest: "./dist",
 
   themeConfig: {
     search: false,
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "About", link: "/about/" },
-      { text: "Projects", link: "/projects/" },
-      { text: "Guide", link: "/guide/" },
-      { text: "GitHub", link: "https://github.com/mtobeiyf/vuepress-homepage" },
-    ],
-    sidebar: {
-      "/guide/": genSidebarConfig("Guide"),
-    },
+    navbar: false,
     lastUpdated: "Last Updated",
   },
 
@@ -28,13 +19,3 @@ module.exports = {
     },
   },
 };
-
-function genSidebarConfig(title) {
-  return [
-    {
-      title,
-      collapsable: false,
-      children: ["", "getting-started", "customize", "advanced"],
-    },
-  ];
-}
