@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <div v-if="data.profile" class="image">
-      <img :src="$withBase(data.profile)" alt="">
+      <img :src="$withBase(data.profile)" alt="" />
     </div>
     <div class="info">
       <div class="name">
@@ -11,19 +11,23 @@
         <p>{{ data.bio }}</p>
       </div>
       <div class="socials">
-        <div v-for="item in data.socials">
-            <a :href="item.link" target="_blank">
-              <img :src="item.icon" :alt="item.title"
-              :title="item.title" />
-            </a>
+        <div v-for="item in data.socials" :key="item.title">
+          <a :href="item.link" target="_blank">
+            <img :src="item.icon" :alt="item.title" :title="item.title" />
+          </a>
         </div>
       </div>
       <div class="contact">
         <div class="email" title="Contact me">{{ data.email }}</div>
       </div>
-      <div v-if="data.cv">
-        <a target="_blank" :href="data.cv" title="Download my CV in PDF">
-          <font size="2em" color=""><b>[CV]</b></font>
+      <div v-if="data.cv" class="cv">
+        <a
+          target="_blank"
+          class="button"
+          :href="data.cv"
+          title="Download my CV in PDF"
+        >
+          My CV
         </a>
       </div>
     </div>
@@ -32,13 +36,13 @@
 
 <script>
 export default {
-  props: ['image', 'cv', 'frontmatter'],
+  props: ["image", "cv", "frontmatter"],
 
   computed: {
     data() {
       return this.frontmatter;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -66,7 +70,7 @@ export default {
     .socials
       display flex
       flex-direction row
-      img 
+      img
         width 1.3rem
         margin 0 0.6rem 0 0
         cursor pointer
@@ -78,6 +82,25 @@ export default {
         font-weight 400
       .email
         font-family Courier New, Courier, monospace
+    .cv
+      .button
+          background-color $btnBgColor
+          border none
+          border-radius 0.3em
+          color white
+          padding 0.5em 1em
+          margin 1em 0
+          font-size 1rem
+          font-family inherit
+          font-weight 400
+          text-align center
+          text-decoration none
+          display inline-block
+          -webkit-transition-duration 0.4s /* Safari */
+          transition-duration 0.4s
+          cursor pointer
+          &:hover
+            background-color $btnHvColor
 
 @media (max-width: $MQMobileNarrow)
   .profile
