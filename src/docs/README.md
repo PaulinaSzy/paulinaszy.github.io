@@ -58,6 +58,16 @@ During my studies, I gained knowledge and hands-on experience in _product develo
 
 ## Projects
 
+<ProjectCard image="/projects/images/coconatdiet_logo.png" hideBorder=true>
+
+**E-commerce website**
+
+I designed and developed an e-commerce website using the JAMStack architecture powered by Nuxt, Strapi and Snipcart. The design was made in Figma.
+
+[[Shop website](https://coconatdiet.pl/)]
+
+</ProjectCard>
+
 <ProjectCard image="/projects/images/clustering_tool.png" hideBorder=true>
 
 **Vizualization tool for analysis of student answers in academic English exercises**
