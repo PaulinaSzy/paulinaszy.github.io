@@ -14,7 +14,7 @@ socials:
 
 bio: Motivated and detail-oriented Data Science & Entrepreneurship graduate with experience in NLP and technical project management. Highly interested in applications of digital technologies in education.
 email: paula.szymaszek (at) gmail (dot) com
-cv: /cv_Paulina.pdf
+cv: /cv_Paulina_Szymaszek.pdf
 ---
 
 <ProfileSection :frontmatter="$page.frontmatter" />
